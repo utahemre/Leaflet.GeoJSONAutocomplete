@@ -31,5 +31,5 @@ to your window.onload function.
 
 #License
 
-Leaflet.loading is free software, and may be redistributed under the MIT License.
+Leaflet.GeoJSONAutocomplete is free software, and may be redistributed under the MIT License.
 
