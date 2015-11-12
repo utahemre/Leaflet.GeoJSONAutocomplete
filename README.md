@@ -37,7 +37,15 @@ to your window.onload function.
 
 [Test it!](https://utahemre.github.io/geojsontest.html)
 
+Your geojson features must have 4 properties
+- **title:** Main title seen in autocomplete results  
+- **description:** More details seen in automplete results  
+- **popupContent:** Content seen in popups.  
+- **image:** Images seen in autocomplete results (read from image folder) 
+
 #License
 
-Leaflet.GeoJSONAutocomplete is free software, and may be redistributed under the MIT License.
+Leaflet.GeoJSONAutocomplete is free software, and may be redistributed under the MIT License. 
+
+Please let me know your comments and usage. 
 
