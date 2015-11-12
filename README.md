@@ -1,7 +1,7 @@
 # Leaflet.GeoJSONAutocomplete
 Leaflet Search Bar For Remote Searching with GeoJSON Services.
 
-[Demo](https://utahemre.github.io/geojsonautocompletedemo.html)
+[Demo](https://utahemre.github.io/geojsonautocompletedemo.html){:target="_blank"}
 
 #Usage
 
@@ -37,7 +37,7 @@ to your window.onload function.
 
 #Test your service response
 
-[Test it!](https://utahemre.github.io/geojsontest.html)
+[Test it!](https://utahemre.github.io/geojsontest.html){:target="_blank"}
 
 Your geojson features must have 4 properties
 - **title:** Main title seen in autocomplete results  
