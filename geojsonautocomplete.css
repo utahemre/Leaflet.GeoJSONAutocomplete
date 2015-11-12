@@ -1,0 +1,153 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 31, 2015, 5:19:55 PM
+    Author     : yeozkaya@gmail.com
+*/
+
+.searchContainer {
+    position: relative;
+    top:15px;
+    left:58px;
+    z-index: 1001;
+    width: 400px;
+    height: 48px;
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    border-left: none;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+    -moz-box-shadow: 2px 2px 2px -2px gray;
+    -webkit-box-shadow: 2px 2px 2px -2px gray;
+    box-shadow: 2px 2px 2px -2px gray;
+
+}
+
+.searchBox {
+    width: 310px;
+    height:46px;
+    border: none;
+    margin-left: 10px;
+    overflow: hidden;
+    outline: none;
+}
+
+.searchButton {
+    background:url('./image/search_double.png') no-repeat;
+    cursor:pointer;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: white;
+    outline: none;
+    vertical-align: middle;
+}
+
+.searchButton:hover {
+    background:url('./image/search_double.png') no-repeat -24px 0px;
+}
+
+.clearButton {
+    background:url('./image/clear_multiple.png') no-repeat;
+    cursor:pointer;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: white;
+    outline: none;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.clearButton:hover {
+    background:url('./image/clear_multiple.png') no-repeat -24px 0px;
+}
+
+.divider {
+    width: 24px;
+    border-left: solid 1px lightgrey;
+    margin-left: 10px;
+}
+
+.result {
+    position: absolute;
+    background-color: white;
+    width: 399px; //1 pixel less than search container beacause of border
+    top: 200px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+
+    -moz-box-shadow: 2px 2px 2px -2px gray;
+    -webkit-box-shadow: 2px 2px 2px -2px gray;
+    box-shadow: 2px 2px 2px -2px gray;
+}
+
+.list {
+    list-style-type:none;
+    padding-left:0;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.listResult {
+    background-color: white;
+    height: 38px;
+    margin-bottom: 0px;
+    border-top: 1px solid #e6e6e6;
+}
+
+.listResult.active {
+    background-color: lightskyblue;
+}
+
+.listResult.mouseover {
+    background-color: lightgrey;
+}
+
+.iconStyle {
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.content {
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 38px;
+    width: 399px; //1 pixel less than search container beacause of border
+    line-height:38px;
+}
+
+.pagingDiv {
+    border-top: 1px solid #e6e6e6;
+}
+
+.pagingArrow {
+    vertical-align: bottom;
+}
+
+.title {
+    margin-left: 10px;
+    line-height:38px;;
+}
+
+
+
+
+
+
