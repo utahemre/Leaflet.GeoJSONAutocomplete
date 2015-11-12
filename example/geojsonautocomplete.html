@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Leaflet.GeoJSONAutocomplete Test Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="./JQuery/jquery-1.11.3.min.js"></script>
+        
+        <link rel="stylesheet" href="./leaflet-0.7.3/leaflet.css" />
+        <script src="./leaflet-0.7.3/leaflet.js"></script>
+
+        <link rel="stylesheet" href="../geojsonautocomplete.min.css" />
+        <script src="../geojsonautocomplete.min.js"></script>
+        <style>
+            html, body { 
+                width: 100%; 
+                height: 100%; 
+                margin: 0px;
+            } 
+            .map {
+                height: 100%;
+                width: 100%;
+                position: relative; 
+            }
+        </style>
+
+        <script>
+            window.onload = function () {
+
+                map = L.map('map', {
+                    center: [39.80, 34.00],
+                    zoom: 6,
+                    zoomControl: false
+                });
+                map.addControl(L.control.zoom({position: 'topright'}));
+                
+                L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: 'Leaflet.GeoJSONAutocomplete Plug-in Test Page',
+                    subdomains: ['a', 'b', 'c']
+                }).addTo(map);
+
+                var options = {
+                    geojsonServiceAddress: "./testgeojsondata.json"
+                };
+                $("#searchContainer").GeoJsonAutocomplete(options);
+            };
+        </script>
+
+    </head>
+    <body>
+        <div id="map" class="map"></div>
+
+        <div id='searchContainer' style="position: fixed;">
+        </div>
+    </body>
+</html>

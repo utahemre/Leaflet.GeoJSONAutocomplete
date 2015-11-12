@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [32.84, 39.92]
+            },
+            "properties": {
+                "popupContent": "This point loves UTAH JAZZ",
+                "title": "Point Geometry",
+                "description": "Description about Point Geometry",
+                "image": "marker.png"
+            }
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [[35.04, 40.52], [36.67, 38.97], [40.82, 39.28], [40.01, 40.59]]
+            },
+            "properties": {
+                "popupContent": "This line loves GALATASARAY",
+                "title": "Line Geometry",
+                "description": "Description about Line Geometry",
+                "image": "polyline.png"
+            }
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [[[31.06, 38.58], [30.06, 39.58], [32.06, 39.58], [32.06, 39.58], [31.06, 38.58]]]
+            },
+            "properties": {
+                "popupContent": "This polygon loves Karl MALONE",
+                "title": "Polygon Geometry",
+                "description": "Description about Polygon Geometry",
+                "image": "polygon.png"
+            }
+        }]
+}
