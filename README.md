@@ -1,6 +1,8 @@
 # Leaflet.GeoJSONAutocomplete
 Leaflet Search Bar For Remote Searching with GeoJSON Services.
 
+[Demo](https://utahemre.github.io/geojsonautocompletedemo.html)
+
 #Usage
 
 Just add   
