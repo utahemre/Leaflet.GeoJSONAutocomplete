@@ -33,6 +33,10 @@ to your window.onload function.
 - **drawColor:** Color for Linestring and polygon geometries.    
 - **pointGeometryZoomLevel:** Zoom level for point geometries. -1 means use leaflet default.
 
+#Test your service response
+
+[Test it!](https://utahemre.github.io/geojsontest.html)
+
 #License
 
 Leaflet.GeoJSONAutocomplete is free software, and may be redistributed under the MIT License.
