@@ -19,6 +19,10 @@ to your window.onload function.
 #Options
 
 - **geojsonServiceAddress:** Address of your geojson service. 
+  - Ajax request sends 3 parameter to your service.
+    - **search** query parameter
+    - **offset** starting index (for paging)
+    - **limit** maximum result count
 - **placeholderMessage:** Placeholder message for search box.  
 - **searchButtonTitle:** Title of search button.  
 - **clearButtonTitle:** Title of Clear button.  
