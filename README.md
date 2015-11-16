@@ -1,9 +1,52 @@
 # Leaflet.GeoJSONAutocomplete
-Leaflet Search Bar For Remote Searching with GeoJSON Services.
+Leaflet Autocomplete For Remote Searching with GeoJSON Services. 
+
+<a href="https://utahemre.github.io/geojsonautocompletedemo.html" target="_blank">Demo</a>
+
+This plug-in runs with classical autocomplete logic. Users type in search box and plug-in sends ajax request to your geojson service. 
 
 It requires Leafletjs and JQuery. It has beeen tested with Leaflet 0.7.3 and JQuery 1.11.3
 
-<a href="https://utahemre.github.io/geojsonautocompletedemo.html" target="_blank">Demo</a>
+#Example Request and Response
+
+When users type 'Ankara' in search box. Plug-in sends a ajax request with 3 parameters like the following.
+
+http://yourGeoJsonSearchAddress?search=Ankara&limit=10&offset=0 (Parameters is explained in Options Section)
+
+Your response should be valid GeoJson like the following
+
+```json
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    32.84,
+                    39.92
+                ]
+            },
+            "properties": {
+                "popupContent": "Content seen in Autocomplete",
+                "title": "Title seen in Autocomplete",
+                "description": "Additional information seen in Autocomplete",
+                "image": "example.png"
+            }
+        }
+    ]
+}
+```
+#Test your service response
+
+<a href="https://utahemre.github.io/geojsontest.html" target="_blank">Test it!</a>
+
+Your geojson features must have 4 properties
+- **title:** Main title seen in autocomplete results  
+- **description:** More details seen in automplete results  
+- **popupContent:** Content seen in popups.  
+- **image:** Images seen in autocomplete results (read from image folder) 
 
 #Usage
 
@@ -41,17 +84,6 @@ to your window.onload function.
 #Paging Mode
 If your geojson service supports paging (accepts offset paramter), you can activate paging with pagingActive parameter in options. 
 When you type any text and press Enter(or click Search Button), Autocomplete runs with paging mode. In paging mode Autocomplete draw all geometries on map in a page.
-
-#Test your service response
-
-<a href="https://utahemre.github.io/geojsontest.html" target="_blank">Test it!</a>
-
-
-Your geojson features must have 4 properties
-- **title:** Main title seen in autocomplete results  
-- **description:** More details seen in automplete results  
-- **popupContent:** Content seen in popups.  
-- **image:** Images seen in autocomplete results (read from image folder) 
 
 #License
 
