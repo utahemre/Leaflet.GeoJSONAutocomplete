@@ -29,7 +29,7 @@ to your window.onload function.
 - **searchButtonTitle:** Title of search button.  
 - **clearButtonTitle:** Title of Clear button.  
 - **foundRecordsMessage:** Found message  
-- **limit:** Maksimum recourd count for evert search  
+- **limit:** Maksimum recourd count for every search  
 - **notFoundMessage:** Not found message  
 - **notFoundHint:** Nof found hint 
 - **drawColor:** Color for Linestring and polygon geometries.    
