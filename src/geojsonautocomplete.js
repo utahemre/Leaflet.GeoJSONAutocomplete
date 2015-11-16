@@ -1,3 +1,7 @@
+/* 
+    Created on : Aug 31, 2015
+    Author     : yeozkaya@gmail.com
+*/
 ;
 (function ($) {
 
@@ -11,7 +15,8 @@
         notFoundMessage: "not found.",
         notFoundHint: "Make sure your search criteria is correct and try again.",
         drawColor: "blue",
-        pointGeometryZoomLevel: -1 //Set zoom level for point geometries -1 means use leaflet default.
+        pointGeometryZoomLevel: -1, //Set zoom level for point geometries -1 means use leaflet default.
+        pagingActive: true
     };
 
     var activeResult = -1;
@@ -130,21 +135,23 @@
         }
         lastSearch = $("#searchBox")[0].value;
 
-        lastSearch = lastSearch.replace(/[^a-zA-Z0-9 ğüışöçÖÇŞĞÜİ]/g, '');
-
         if (lastSearch === "") {
             return;
         }
 
+        var data = {
+            search: lastSearch,
+            limit: limitToSend
+        };
+        
+        if(options.pagingActive){
+            data.offset = offset;
+        }
+        
         $.ajax({
             url: options.geojsonServiceAddress,
             type: 'GET',
-            data:
-                    {
-                        search: lastSearch,
-                        offset: offset,
-                        limit: limitToSend
-                    },
+            data: data,
             dataType: 'json',
             success: function (json) {
 
@@ -156,7 +163,11 @@
                 else {
                     resultCount = json.features.length;
                     features = json.features;
-                    featureCollection = json.features.slice(0, json.features.length - 1);
+
+                    if (limitToSend === resultCount)
+                        featureCollection = json.features.slice(0, json.features.length - 1);
+                    else
+                        featureCollection = json.features;
                 }
                 createDropDown(withPaging);
                 searchLayerType = (withPaging ? 1 : 0);
@@ -227,8 +238,8 @@
             }
 
             var htmlPaging = "<div align='right' class='pagingDiv'>" + (offset + 1) + " - " + (offset + loopCount) + " " + options.foundRecordsMessage + " ";
-            htmlPaging += "<input id='pagingPrev' type='image' src='./image/" + prevPic + "' width='16' height='16' class='pagingArrow' " + prevDisabled + ">";
-            htmlPaging += "<input id='pagingNext' type='image' src='./image/" + nextPic + "' width='16' height='16' class='pagingArrow' " + nextDisabled + "></div>";
+            htmlPaging += "<input id='pagingPrev' type='image' src='../dist/image/" + prevPic + "' width='16' height='16' class='pagingArrow' " + prevDisabled + ">";
+            htmlPaging += "<input id='pagingNext' type='image' src='../dist/image/" + nextPic + "' width='16' height='16' class='pagingArrow' " + nextDisabled + "></div>";
             $("#resultsDiv").append(htmlPaging);
 
             $("#pagingPrev").mousedown(function () {
@@ -241,7 +252,6 @@
 
             drawGeoJsonList();
         }
-
     }
 
     function listElementMouseEnter(listElement) {
@@ -419,12 +429,15 @@
 
             fillSearchBox();
 
-            if (searchLayerType === 0) {
-                drawGeoJson(activeResult);
+            if (activeResult !== -1) {
+                if (searchLayerType === 0) {
+                    drawGeoJson(activeResult);
+                }
+                else {
+                    focusGeoJson(activeResult);
+                }
             }
-            else {
-                focusGeoJson(activeResult);
-            }
+
         }
     }
 
@@ -447,11 +460,14 @@
             }
 
             fillSearchBox();
-            if (searchLayerType === 0) {
-                drawGeoJson(activeResult);
-            }
-            else {
-                focusGeoJson(activeResult);
+
+            if (activeResult !== -1) {
+                if (searchLayerType === 0) {
+                    drawGeoJson(activeResult);
+                }
+                else {
+                    focusGeoJson(activeResult);
+                }
             }
         }
     }
@@ -474,7 +490,7 @@
     }
 
     function searchButtonClick() {
-        getValuesAsGeoJson(true);
+        getValuesAsGeoJson(options.pagingActive);
 
     }
 
@@ -509,6 +525,3 @@
         activeResult = -1;
     }
 })(jQuery);
-
-
-
