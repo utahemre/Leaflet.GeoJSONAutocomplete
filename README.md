@@ -23,7 +23,7 @@ to your window.onload function.
 - **geojsonServiceAddress:** Address of your geojson service. 
   - Ajax request sends 3 parameter to your service.
     - **search** query parameter
-    - **offset** starting index (for paging)
+    - **offset** starting index (If pagingActive parameter is true)
     - **limit** maximum result count
 - **placeholderMessage:** Placeholder message for search box.  
 - **searchButtonTitle:** Title of search button.  
@@ -34,6 +34,11 @@ to your window.onload function.
 - **notFoundHint:** Nof found hint 
 - **drawColor:** Color for Linestring and polygon geometries.    
 - **pointGeometryZoomLevel:** Zoom level for point geometries. -1 means use leaflet default.
+- **pagingActive:** If your geojson service supports paging (accepts offset parameter) change this to true.
+
+#Paging Mode
+If your geojson service supports paging (accepts offset paramter), you can activate paging with pagingActive parameter in options. 
+When you type any text and press Enter(or click Search Button), Autocomplete runs with paging mode.
 
 #Test your service response
 
