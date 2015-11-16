@@ -38,7 +38,7 @@ to your window.onload function.
 
 #Paging Mode
 If your geojson service supports paging (accepts offset paramter), you can activate paging with pagingActive parameter in options. 
-When you type any text and press Enter(or click Search Button), Autocomplete runs with paging mode.
+When you type any text and press Enter(or click Search Button), Autocomplete runs with paging mode. In paging mode Autocomplete draw all geometries on map in a page.
 
 #Test your service response
 
