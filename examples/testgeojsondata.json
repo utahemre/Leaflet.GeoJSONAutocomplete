@@ -1,40 +1,169 @@
 {
     "type": "FeatureCollection",
-    "features": [{
+    "features": [
+        {
             "type": "Feature",
             "geometry": {
                 "type": "Point",
-                "coordinates": [32.84, 39.92]
+                "coordinates": [
+                    32.84,
+                    39.92
+                ]
             },
             "properties": {
                 "popupContent": "This point loves UTAH JAZZ",
-                "title": "Point Geometry",
-                "description": "Description about Point Geometry",
+                "title": "Point Geometry 1",
+                "description": "Description about Point Geometry 1",
                 "image": "marker.png"
             }
-        }, {
+        },
+        {
             "type": "Feature",
             "geometry": {
                 "type": "LineString",
-                "coordinates": [[35.04, 40.52], [36.67, 38.97], [40.82, 39.28], [40.01, 40.59]]
+                "coordinates": [
+                    [
+                        35.04,
+                        40.52
+                    ],
+                    [
+                        36.67,
+                        38.97
+                    ],
+                    [
+                        40.82,
+                        39.28
+                    ],
+                    [
+                        40.01,
+                        40.59
+                    ]
+                ]
             },
             "properties": {
-                "popupContent": "This line loves GALATASARAY",
-                "title": "Line Geometry",
-                "description": "Description about Line Geometry",
+                "popupContent": "This line loves Chris MORRIS",
+                "title": "Line Geometry 1",
+                "description": "Description about Line Geometry 1",
                 "image": "polyline.png"
             }
-        }, {
+        },
+        {
             "type": "Feature",
             "geometry": {
                 "type": "Polygon",
-                "coordinates": [[[31.06, 38.58], [30.06, 39.58], [32.06, 39.58], [32.06, 39.58], [31.06, 38.58]]]
+                "coordinates": [
+                    [
+                        [
+                            31.06,
+                            38.58
+                        ],
+                        [
+                            30.06,
+                            39.58
+                        ],
+                        [
+                            32.06,
+                            39.58
+                        ],
+                        [
+                            32.06,
+                            39.58
+                        ],
+                        [
+                            31.06,
+                            38.58
+                        ]
+                    ]
+                ]
+            },
+            "properties": {
+                "popupContent": "This polygon loves John STOCKTON",
+                "title": "Polygon Geometry 1",
+                "description": "Description about Polygon Geometry 1",
+                "image": "polygon.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    35.84,
+                    38.92
+                ]
+            },
+            "properties": {
+                "popupContent": "This point loves Jeff HORNACEK",
+                "title": "Point Geometry 2",
+                "description": "Description about Point Geometry 2",
+                "image": "marker.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        37.04,
+                        37.52
+                    ],
+                    [
+                        36.67,
+                        36.97
+                    ],
+                    [
+                        42.82,
+                        39.28
+                    ],
+                    [
+                        40.01,
+                        38.59
+                    ]
+                ]
+            },
+            "properties": {
+                "popupContent": "This line loves Greg FOSTER",
+                "title": "Line Geometry 2",
+                "description": "Description about Line Geometry 2",
+                "image": "polyline.png"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            28.06,
+                            39.58
+                        ],
+                        [
+                            27.06,
+                            40.58
+                        ],
+                        [
+                            30.06,
+                            40.58
+                        ],
+                        [
+                            28.06,
+                            38.58
+                        ],
+                        [
+                            28.06,
+                            39.58
+                        ]
+                    ]
+                ]
             },
             "properties": {
                 "popupContent": "This polygon loves Karl MALONE",
-                "title": "Polygon Geometry",
-                "description": "Description about Polygon Geometry",
+                "title": "Polygon Geometry 3",
+                "description": "Description about Polygon Geometry 3",
                 "image": "polygon.png"
             }
-        }]
+        }
+    ]
 }
