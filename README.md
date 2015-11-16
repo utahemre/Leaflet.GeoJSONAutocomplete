@@ -1,6 +1,8 @@
 # Leaflet.GeoJSONAutocomplete
 Leaflet Search Bar For Remote Searching with GeoJSON Services.
 
+It requires Leafletjs and JQuery. It has beeen tested with Leaflet 0.7.3 and JQuery 1.11.3
+
 <a href="https://utahemre.github.io/geojsonautocompletedemo.html" target="_blank">Demo</a>
 
 #Usage
