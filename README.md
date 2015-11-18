@@ -29,7 +29,7 @@ Your response should be valid GeoJson like the following
                 ]
             },
             "properties": {
-                "popupContent": "Content seen in Autocomplete",
+                "popupContent": "Content seen in Popup",
                 "title": "Title seen in Autocomplete",
                 "description": "Additional information seen in Autocomplete",
                 "image": "example.png"
@@ -44,7 +44,7 @@ Your response should be valid GeoJson like the following
 
 Your geojson features must have 4 properties
 - **title:** Main title seen in autocomplete results  
-- **description:** More details seen in automplete results  
+- **description:** More details seen in autocomplete results  
 - **popupContent:** Content seen in popups.  
 - **image:** Images seen in autocomplete results (read from image folder) 
 
@@ -74,7 +74,7 @@ to your window.onload function.
 - **searchButtonTitle:** Title of search button.  
 - **clearButtonTitle:** Title of Clear button.  
 - **foundRecordsMessage:** Found message  
-- **limit:** Maksimum recourd count for every search  
+- **limit:** Maximum record count for every search  
 - **notFoundMessage:** Not found message  
 - **notFoundHint:** Nof found hint 
 - **drawColor:** Color for Linestring and polygon geometries.    
@@ -82,7 +82,7 @@ to your window.onload function.
 - **pagingActive:** If your geojson service supports paging (accepts offset parameter) change this to true.
 
 #Paging Mode
-If your geojson service supports paging (accepts offset paramter), you can activate paging with pagingActive parameter in options. 
+If your geojson service supports paging (accepts offset parameter), you can activate paging with pagingActive parameter in options. 
 When you type any text and press Enter(or click Search Button), Autocomplete runs with paging mode. In paging mode Autocomplete draw all geometries on map in a page.
 
 #License
