@@ -91,3 +91,5 @@ Leaflet.GeoJSONAutocomplete is free software, and may be redistributed under the
 
 Please let me know your comments and usage. 
 
+Thanks to <a href="http://www.citysurf.com.tr" target="_blank">CitySurf</a> to inspire and support this plugin.
+
