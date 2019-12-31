@@ -41,11 +41,11 @@
 
         $(this).each(function () {
             var element = $(this);
-            element.addClass("searchContainer");
-            element.append('<input id="searchBox" class="searchBox" placeholder="' + options.placeholderMessage + '"/>');
-            element.append('<input id="searchButton" class="searchButton" type="submit" value="" title="' + options.searchButtonTitle + '"/>');
-            element.append('<span class="divider"></span>');
-            element.append('<input id="clearButton" class="clearButton" type="submit"  value="" title="' + options.clearButtonTitle + '">');
+            element.addClass("autocomplete-searchContainer");
+            element.append('<input id="searchBox" class="autocomplete-searchBox" placeholder="' + options.placeholderMessage + '"/>');
+            element.append('<input id="searchButton" class="autocomplete-searchButton" type="submit" value="" title="' + options.searchButtonTitle + '"/>');
+            element.append('<span class="autocomplete-divider"></span>');
+            element.append('<input id="clearButton" class="autocomplete-clearButton" type="submit"  value="" title="' + options.clearButtonTitle + '">');
 
             $("#searchBox")[0].value = "";
             $("#searchBox").delayKeyup(function (event) {
@@ -183,7 +183,7 @@
         var parent = $("#searchBox").parent();
 
         $("#resultsDiv").remove();
-        parent.append("<div id='resultsDiv' class='result'><ul id='resultList' class='list'></ul><div>");
+        parent.append("<div id='resultsDiv' class='autocomplete-result'><ul id='resultList' class='autocomplete-list'></ul><div>");
 
         $("#resultsDiv")[0].style.position = $("#searchBox")[0].style.position;
         $("#resultsDiv")[0].style.left = (parseInt($("#searchBox")[0].style.left) - 10) + "px";
@@ -202,9 +202,9 @@
 
         for (var i = 0; i < loopCount; i++) {
 
-            var html = "<li id='listElement" + i + "' class='listResult'>";
-            html += "<span id='listElementContent" + i + "' class='content'><img src='./image/" + features[i].properties.image + "' class='iconStyle' align='middle'>";
-            html += "<font size='2' color='#333' class='title'>" + features[i].properties.title + "</font><font size='1' color='#8c8c8c'> " + features[i].properties.description + "<font></span></li>";
+            var html = "<li id='listElement" + i + "' class='autocomplete-listResult'>";
+            html += "<span id='listElementContent" + i + "' class='autocomplete-content'><img src='./image/" + features[i].properties.image + "' class='autocomplete-iconStyle' align='middle'>";
+            html += "<font size='2' color='#333' class='autocomplete-title'>" + features[i].properties.title + "</font><font size='1' color='#8c8c8c'> " + features[i].properties.description + "<font></span></li>";
 
             $("#resultList").append(html);
 
@@ -237,9 +237,9 @@
                 nextDisabled = "disabled";
             }
 
-            var htmlPaging = "<div align='right' class='pagingDiv'>" + (offset + 1) + " - " + (offset + loopCount) + " " + options.foundRecordsMessage + " ";
-            htmlPaging += "<input id='pagingPrev' type='image' src='../dist/image/" + prevPic + "' width='16' height='16' class='pagingArrow' " + prevDisabled + ">";
-            htmlPaging += "<input id='pagingNext' type='image' src='../dist/image/" + nextPic + "' width='16' height='16' class='pagingArrow' " + nextDisabled + "></div>";
+            var htmlPaging = "<div align='right' class='autocomplete-pagingDiv'>" + (offset + 1) + " - " + (offset + loopCount) + " " + options.foundRecordsMessage + " ";
+            htmlPaging += "<input id='pagingPrev' type='image' src='../dist/image/" + prevPic + "' width='16' height='16' class='autocomplete-pagingArrow' " + prevDisabled + ">";
+            htmlPaging += "<input id='pagingNext' type='image' src='../dist/image/" + nextPic + "' width='16' height='16' class='autocomplete-pagingArrow' " + nextDisabled + "></div>";
             $("#resultsDiv").append(htmlPaging);
 
             $("#pagingPrev").mousedown(function () {
@@ -506,7 +506,7 @@
 
         var parent = $("#searchBox").parent();
         $("#resultsDiv").remove();
-        parent.append("<div id='resultsDiv' class='result'><i>" + lastSearch + " " + options.notFoundMessage + " <p><small>" + options.notFoundHint + "</small></i><div>");
+        parent.append("<div id='resultsDiv' class='autocomplete-result'><i>" + lastSearch + " " + options.notFoundMessage + " <p><small>" + options.notFoundHint + "</small></i><div>");
     }
 
     function prevPaging() {
