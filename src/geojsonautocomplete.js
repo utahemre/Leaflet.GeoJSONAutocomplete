@@ -1,6 +1,8 @@
 /* 
     Created on : Aug 31, 2015
     Author     : yeozkaya@gmail.com
+    
+    Modified for better classnames as per issue #3 by BaDu (Netkaart-feedback)
 */
 ;
 (function ($) {
