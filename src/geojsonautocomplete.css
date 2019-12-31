@@ -1,9 +1,11 @@
 /* 
     Created on : Aug 31, 2015
     Author     : yeozkaya@gmail.com
+    
+    Modified for better classnames as per issue #3 by BaDu (Netkaart-feedback)
 */
 
-.searchContainer {
+.autocomplete-searchContainer {
     position: relative;
     top:15px;
     left:58px;
@@ -25,7 +27,7 @@
 
 }
 
-.searchBox {
+.autocomplete-searchBox {
     width: 310px;
     height:46px;
     border: none;
@@ -34,7 +36,7 @@
     outline: none;
 }
 
-.searchButton {
+.autocomplete-searchButton {
     background:url('./image/search_double.png') no-repeat;
     cursor:pointer;
     width: 24px;
@@ -45,11 +47,11 @@
     vertical-align: middle;
 }
 
-.searchButton:hover {
+.autocomplete-searchButton:hover {
     background:url('./image/search_double.png') no-repeat -24px 0px;
 }
 
-.clearButton {
+.autocomplete-clearButton {
     background:url('./image/clear_multiple.png') no-repeat;
     cursor:pointer;
     width: 24px;
@@ -61,17 +63,17 @@
     vertical-align: middle;
 }
 
-.clearButton:hover {
+.autocomplete-clearButton:hover {
     background:url('./image/clear_multiple.png') no-repeat -24px 0px;
 }
 
-.divider {
+.autocomplete-divider {
     width: 24px;
     border-left: solid 1px lightgrey;
     margin-left: 10px;
 }
 
-.result {
+.autocomplete-result {
     position: absolute;
     background-color: white;
     width: 399px; //1 pixel less than search container beacause of border
@@ -89,36 +91,36 @@
     box-shadow: 2px 2px 2px -2px gray;
 }
 
-.list {
+.autocomplete-list {
     list-style-type:none;
     padding-left:0;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
-.listResult {
+.autocomplete-listResult {
     background-color: white;
     height: 38px;
     margin-bottom: 0px;
     border-top: 1px solid #e6e6e6;
 }
 
-.listResult.active {
+.autocomplete-listResult.active {
     background-color: lightskyblue;
 }
 
-.listResult.mouseover {
+.autocomplete-listResult.mouseover {
     background-color: lightgrey;
 }
 
-.iconStyle {
+.autocomplete-iconStyle {
     width: 24px;
     height: 24px;
     margin-left: 5px;
     vertical-align: middle;
 }
 
-.content {
+.autocomplete-content {
     float: left;
     white-space: nowrap;
     overflow: hidden;
@@ -128,15 +130,15 @@
     line-height:38px;
 }
 
-.pagingDiv {
+.autocomplete-pagingDiv {
     border-top: 1px solid #e6e6e6;
 }
 
-.pagingArrow {
+.autocomplete-pagingArrow {
     vertical-align: bottom;
 }
 
-.title {
+.autocomplete-title {
     margin-left: 10px;
     line-height:38px;;
 }
