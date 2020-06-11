@@ -16,6 +16,8 @@
         limit: 10,
         notFoundMessage: "not found.",
         notFoundHint: "Make sure your search criteria is correct and try again.",
+        minimumQueryLength: 0,  //set of minimum length for query word
+        minimumQueryMessage: "Minimum search characters:",
         drawColor: "blue",
         pointGeometryZoomLevel: -1, //Set zoom level for point geometries -1 means use leaflet default.
         pagingActive: true
@@ -139,6 +141,11 @@
 
         if (lastSearch === "") {
             return;
+        }
+        
+        if(lastSearch.length <  options.minimumQueryLength) {
+	   	processminimumQueryLengthError();
+           return;
         }
 
         var data = {
@@ -509,6 +516,21 @@
         var parent = $("#searchBox").parent();
         $("#resultsDiv").remove();
         parent.append("<div id='resultsDiv' class='autocomplete-result'><i>" + lastSearch + " " + options.notFoundMessage + " <p><small>" + options.notFoundHint + "</small></i><div>");
+    }
+    
+    function processminimumQueryLengthError() {
+        resultCount = 0;
+        features = [];
+        activeResult = -1;
+        $("#resultsDiv").remove();
+        if (searchLayer !== undefined) {
+            map.removeLayer(searchLayer);
+            searchLayer = undefined;
+        }
+
+        var parent = $("#searchBox").parent();
+        $("#resultsDiv").remove();
+        parent.append("<div id='resultsDiv' class='autocomplete-result'><i> <p><small>" + options.minimumQueryMessage + options.minimumQueryLength +"</small></i><div>");
     }
 
     function prevPaging() {
