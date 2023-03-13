@@ -80,6 +80,8 @@ to your window.onload function.
 - **drawColor:** Color for Linestring and polygon geometries.    
 - **pointGeometryZoomLevel:** Zoom level for point geometries. -1 means use leaflet default.
 - **pagingActive:** If your geojson service supports paging (accepts offset parameter) change this to true.
+- **minimumQueryLength:** Set a minimum length for search word or set 0 for no minimum, default:0
+- **minimumQueryMessage:** minimum length message.
 
 #Paging Mode
 If your geojson service supports paging (accepts offset parameter), you can activate paging with pagingActive parameter in options. 
